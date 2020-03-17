@@ -33,7 +33,7 @@
   },
   "husky": {
     "hooks": {
-      "post-push": "yarn publish"
+      "pre-push": "yarn publish"
     }
   }
 }
