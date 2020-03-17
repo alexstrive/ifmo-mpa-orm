@@ -2,7 +2,7 @@
   "name": "@alexstrive/ifmo-mpa-orm",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "1.0.7",
+  "version": "1.0.0",
   "private": false,
   "license": "MIT",
   "repository": {
@@ -23,11 +23,17 @@
     "sequelize-typescript": "^1.1.0"
   },
   "devDependencies": {
-    "typescript": "3.8.3"
+    "typescript": "3.8.3",
+    "husky": "4.2.3"
   },
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "yarn build",
     "postpublish": "rm -r dist"
+  },
+  "husky": {
+    "hooks": {
+      "post-push": "yarn publish"
+    }
   }
 }
